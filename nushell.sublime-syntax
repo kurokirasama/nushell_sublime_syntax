@@ -3,7 +3,7 @@
 # https://www.sublimetext.com/docs/syntax.html
 # https://www.https://www.nushell.sh/book/
 name: nushell
-scope: source.m
+scope: source.nu
 version: 1
 
 file_extensions:
@@ -73,25 +73,20 @@ contexts:
     - include: line-comments
 
   block-comments:
-    - match: ^\s*(#\{)\s*\n
-      captures:
-        1: punctuation.definition.comment.nu
-      push: block-comment-content
+   - match: ^\s*(#\{)\s*\n
+     captures:
+       1: punctuation.definition.comment.nu
+     push: block-comment-content
 
   block-comment-content:
     - meta_scope: comment.block.percentage.nu
-    - match: ^\s*(#\})\s*$\n?
+    - match: ^\s*(#)\s*$\n?
       captures:
         1: punctuation.definition.comment.nu
       pop: 1
     - include: block-comments
 
   line-comments:
-    - match: ^\s*(##(?!%))\s*(.*\S)?\s*\n?
-      scope: comment.line.double-percentage.nu
-      captures:
-        1: punctuation.definition.comment.nu
-        2: entity.name.section.nu
     - match: (#+).*\n?
       scope: comment.line.percentage.nu
       captures:
