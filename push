@@ -1,6 +1,0 @@
-#!/bin/bash
-
-git add -A
-git status
-git commit -am "$1"
-git push origin main
