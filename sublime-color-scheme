@@ -1,0 +1,42 @@
+//add this to your theme.sublime-color-scheme
+{
+        "rules": [
+                {
+                        // "scope": "string",
+                        // "foreground": "#00FF00",
+                },
+
+                {
+                        "scope": "comment",
+                        "foreground": "#ff0000",
+                },
+                {
+                        "scope": "support.function.builtin.nu",
+                        "foreground": "#BB00FF", 
+                },
+                {
+                         "scope": "support.function.custom.nu",
+                         "foreground": "#FF00FF",
+                },
+                {
+                         "scope": "support.function.plugin.nu",
+                         "foreground": "#004CFF",
+                },
+                {
+                         "scope": "support.function.keywords.nu",
+                         "foreground": "#A020F0",
+                },
+                {
+                         "scope": "support.function.aliases.nu",
+                         "foreground": "#D580FF",
+                },
+                {
+                         "scope": "support.function.operators.nu",
+                         "foreground": "#FFFF00",
+                },
+                {
+                         "scope": "support.function.boolean.nu",
+                         "foreground": "#00FFFF",
+                }
+        ],
+}

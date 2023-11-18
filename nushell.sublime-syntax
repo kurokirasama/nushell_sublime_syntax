@@ -22,7 +22,22 @@ variables:
 
   # https://www.nushell.sh/book/command_reference.html#command-reference
   nushell_functions: |-
-    (?x: alias | all | ansi | ansi gradient | ansi link | ansi strip | any | append | ast | bits | bits and | bits not | bits or | bits rol | bits ror | bits shl | bits shr | bits xor | break | bytes | bytes add | bytes at | bytes build | bytes collect | bytes ends-with | bytes index-of | bytes length | bytes remove | bytes replace | bytes reverse | bytes starts-with | cd | char | clear | collect | columns | commandline | compact | complete | config | config env | config nu | config reset | const | continue | cp | cp-old | custom-value generate | custom-value generate2 | custom-value update | date | date format | date humanize | date list-timezone | date now | date to-record | date to-table | date to-timezone | debug | debug info | decode | decode base64 | decode hex | def | def-env | default | describe | detect columns | dfr | dfr agg | dfr agg-groups | dfr all-false | dfr all-true | dfr append | dfr arg-max | dfr arg-min | dfr arg-sort | dfr arg-true | dfr arg-unique | dfr arg-where | dfr as | dfr as-date | dfr as-datetime | dfr cache | dfr col | dfr collect | dfr columns | dfr concat-str | dfr concatenate | dfr contains | dfr count | dfr count-null | dfr cumulative | dfr datepart | dfr drop | dfr drop-duplicates | dfr drop-nulls | dfr dtypes | dfr dummies | dfr explode | dfr expr-not | dfr fetch | dfr fill-nan | dfr fill-null | dfr filter | dfr filter-with | dfr first | dfr flatten | dfr get | dfr get-day | dfr get-hour | dfr get-minute | dfr get-month | dfr get-nanosecond | dfr get-ordinal | dfr get-second | dfr get-week | dfr get-weekday | dfr get-year | dfr group-by | dfr implode | dfr into-df | dfr into-lazy | dfr into-nu | dfr is-duplicated | dfr is-in | dfr is-not-null | dfr is-null | dfr is-unique | dfr join | dfr last | dfr lit | dfr lowercase | dfr ls | dfr max | dfr mean | dfr median | dfr melt | dfr min | dfr n-unique | dfr not | dfr open | dfr otherwise | dfr quantile | dfr query | dfr rename | dfr replace | dfr replace-all | dfr reverse | dfr rolling | dfr sample | dfr select | dfr set | dfr set-with-idx | dfr shape | dfr shift | dfr slice | dfr sort-by | dfr std | dfr str-lengths | dfr str-slice | dfr strftime | dfr sum | dfr summary | dfr take | dfr to-arrow | dfr to-avro | dfr to-csv | dfr to-jsonl | dfr to-parquet | dfr unique | dfr uppercase | dfr value-counts | dfr var | dfr when | dfr with-column | do | drop | drop column | drop nth | du | each | each while | echo | encode | encode base64 | encode hex | enumerate | error make | every | exec | exit | explain | explore | export | export alias | export const | export def | export def-env | export extern | export extern-wrapped | export module | export use | export-env | extern | extern-wrapped | fill | filter | find | first | flatten | fmt | for | format | format date | format duration | format filesize | from | from csv | from eml | from ics | from ini | from json | from nuon | from ods | from ssv | from toml | from tsv | from url | from vcf | from xlsx | from xml | from yaml | from yml | generate | get | glob | grid | group | group-by | gstat | hash | hash md5 | hash sha256 | headers | help | help aliases | help commands | help escapes | help externs | help modules | help operators | hide | hide-env | hist | histogram | history | history session | http | http delete | http get | http head | http options | http patch | http post | http put | if | ignore | inc | input | input list | input listen | insert | inspect | into | into binary | into bits | into bool | into datetime | into duration | into filesize | into float | into int | into record | into sqlite | into string | into value | is-admin | is-empty | items | join | keybindings | keybindings default | keybindings list | keybindings listen | kill | last | lazy make | length | let | let-env | lines | load-env | loop | ls | match | math | math abs | math arccos | math arccosh | math arcsin | math arcsinh | math arctan | math arctanh | math avg | math ceil | math cos | math cosh | math floor | math ln | math log | math max | math median | math min | math mode | math product | math round | math sin | math sinh | math sqrt | math stddev | math sum | math tan | math tanh | math variance | merge | metadata | mkdir | module | move | mut | mv | net | nu-check | nu-highlight | open | overlay | overlay hide | overlay list | overlay new | overlay use | par-each | parse | path | path basename | path dirname | path exists | path expand | path join | path parse | path relative-to | path split | path type | plot | port | port scan | prepend | print | ps | query | query db | query json | query web | query xml | random | random bool | random chars | random dice | random float | random int | random uuid | range | reduce | register | reject | rename | return | reverse | rm | roll | roll down | roll left | roll right | roll up | rotate | run-external | save | schema | scope | scope aliases | scope commands | scope engine-stats | scope externs | scope modules | scope variables | select | seq | seq char | seq date | shuffle | size | skip | skip until | skip while | sleep | sort | sort-by | source | source-env | split | split chars | split column | split list | split row | split words | split-by | start | str | str camel-case | str capitalize | str contains | str distance | str downcase | str ends-with | str expand | str index-of | str join | str kebab-case | str length | str pascal-case | str replace | str reverse | str screaming-snake-case | str snake-case | str starts-with | str stats | str substring | str title-case | str trim | str upcase | sys | table | take | take until | take while | term size | timeit | to | to csv | to html | to json | to md | to nuon | to text | to toml | to tsv | to xml | to yaml | touch | transpose | try | tutor | umkdir | unfold | uniq | update | update cells | upsert | url | url build-query | url decode | url encode | url join | url parse | use | values | version | view | view files | view source | view span | watch | where | which | while | whoami | window | with-env | wrap | xyplot | zip)
+    (?x: all | ansi | any | append | ast | bits | break | bytes | cd | char | clear | collect | columns | commandline | compact | complete | config | continue | cp | cp-old | custom-value | date | debug | decode | default | describe | detect | dfr | do | drop | du | each | echo | encode | enumerate | error | every | exec | exit | explain | explore | export-env | fill | filter | find | first | flatten | fmt | format | from | generate | get | glob | grid | group | group-by | gstat | hash | headers | help | hide-env | hist | histogram | history | http | if | ignore | inc | input | insert | inspect | into | is-admin | is-empty | items | join | keybindings | kill | last | lazy | length | let-env | lines | load-env | loop | ls | match | math | merge | metadata | mkdir | move | mv | net | nu-check | nu-highlight | open | overlay | par-each | parse | path | plot | port | prepend | print | ps | query | random | range | reduce | reject | rename | reverse | rm | roll | rotate | run-external | save | schema | scope | select | seq | shuffle | skip | sleep | sort | sort-by | source-env | split | split-by | start | str | sys | table | take | term | timeit | to | touch | transpose | try | tutor | umkdir | uniq | update | upsert | url | values | version | view | watch | where | which | while | whoami | window | with-env | wrap | xyplot | zip | else)
+
+  custom_functions: |-
+    (?x: your | custom | commands)
+
+  plugin_functions: |-
+    (?x: commands | of | installed | plugins)
+
+  nushell_keywords: |-
+    (?x: alias | const | def | def-env | export | extern | for | hide | let | module | mut | overlay | register | return | scope | source | use)
+
+  nushell_aliases: |-
+    (?x: your | aliases)
+
+  nushell_operators: |-
+    (?x: and | or | mod | in | not-in | not | xor | bit-or | bit-xor | bit-and | bit-shl | bit-shr | starts-with | ends-with)
 
 ################################################################################
 
@@ -55,6 +70,11 @@ contexts:
     - include: builtin-types
     - include: builtin-commands
     - include: builtin-functions
+    - include: custom-functions
+    - include: plugin-functions
+    - include: nushell-keywords
+    - include: nushell-aliases
+    - include: nushell-operators
     - include: variables
     - include: invalid-variables
 
@@ -891,6 +911,26 @@ contexts:
   builtin-functions:
     - match: \b{{nushell_functions}}\b
       scope: meta.function-call.nu support.function.builtin.nu
+
+  custom-functions:
+  - match: \b{{custom_functions}}\b
+    scope: support.function.custom.nu
+
+  plugin-functions:
+  - match: \b{{plugin_functions}}\b
+    scope: support.function.plugin.nu
+
+  nushell-keywords:
+  - match: \b{{nushell_keywords}}\b
+    scope: support.function.keywords.nu
+
+  nushell-aliases:
+  - match: \b{{nushell_aliases}}\b
+    scope: support.function.aliases.nu
+
+  nushell-operators:
+  - match: \b{{nushell_operators}}\b
+    scope: support.function.operators.nu
 
 ###[ BUILTIN PACKAGES AND OBJECT FUNCTIONS ]####################################
 
