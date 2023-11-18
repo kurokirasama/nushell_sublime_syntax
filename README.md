@@ -8,7 +8,7 @@
 ```bash
 ls | find -v README & export & color | get name | ansi strip | each {|file| cp -f $file (~/.config/sublime-text/Packages/User/nushell.sublime-syntax | path expand)}
 ```
-3. In sublime, open `Preferences > Customize Color Scheme` and add the contents of sublime-color-scheme. Modify to your liking.
+3. In sublime, open `Preferences > Customize Color Scheme` and add the contents of `sublime-color-scheme`. Modify to your liking.
 
 # Update commands
 If you need to update nushell functions or add your custom commands and aliases, run:
