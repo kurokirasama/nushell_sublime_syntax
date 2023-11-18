@@ -28,7 +28,7 @@ variables:
     (?x: your | custom | functions)
 
   plugin_functions: |-
-    (?x: commands | of | installed | plugin)
+    (?x: commands | of | installed | plugins)
 
   nushell_keywords: |-
     (?x: alias | const | def | def-env | export | extern | for | hide | let | module | mut | overlay | register | return | scope | source | use)
