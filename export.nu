@@ -81,6 +81,4 @@ export def "nushell-syntax-2-sublime" [] {
   }
   
   $file | save -f ~/.config/sublime-text/Packages/User/nushell.sublime-syntax
-
-  cp ~/.config/sublime-text/Packages/User/nushell.sublime-syntax ~/Dropbox/Development/linux/sublime/nushell_sublime_syntax/
 }
