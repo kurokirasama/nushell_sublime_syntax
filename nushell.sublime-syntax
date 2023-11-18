@@ -25,10 +25,10 @@ variables:
     (?x: all | ansi | any | append | ast | bits | break | bytes | cd | char | clear | collect | columns | commandline | compact | complete | config | continue | cp | cp-old | custom-value | date | debug | decode | default | describe | detect | dfr | do | drop | du | each | echo | encode | enumerate | error | every | exec | exit | explain | explore | export-env | fill | filter | find | first | flatten | fmt | format | from | generate | get | glob | grid | group | group-by | gstat | hash | headers | help | hide-env | hist | histogram | history | http | if | ignore | inc | input | insert | inspect | into | is-admin | is-empty | items | join | keybindings | kill | last | lazy | length | let-env | lines | load-env | loop | ls | match | math | merge | metadata | mkdir | move | mv | net | nu-check | nu-highlight | open | overlay | par-each | parse | path | plot | port | prepend | print | ps | query | random | range | reduce | reject | rename | reverse | rm | roll | rotate | run-external | save | schema | scope | select | seq | shuffle | skip | sleep | sort | sort-by | source-env | split | split-by | start | str | sys | table | take | term | timeit | to | touch | transpose | try | tutor | umkdir | uniq | update | upsert | url | values | version | view | watch | where | which | while | whoami | window | with-env | wrap | xyplot | zip | else)
 
   custom_functions: |-
-    (?x: your | custom | commands)
+    (?x: your | custom | functions)
 
   plugin_functions: |-
-    (?x: commands | of | installed | plugins)
+    (?x: commands | of | installed | plugin)
 
   nushell_keywords: |-
     (?x: alias | const | def | def-env | export | extern | for | hide | let | module | mut | overlay | register | return | scope | source | use)
@@ -38,6 +38,9 @@ variables:
 
   nushell_operators: |-
     (?x: and | or | mod | in | not-in | not | xor | bit-or | bit-xor | bit-and | bit-shl | bit-shr | starts-with | ends-with)
+
+  boolean_operators: |-
+    (?x: true | false)
 
 ################################################################################
 
@@ -75,6 +78,7 @@ contexts:
     - include: nushell-keywords
     - include: nushell-aliases
     - include: nushell-operators
+    - include: boolean-operators
     - include: variables
     - include: invalid-variables
 
@@ -931,6 +935,10 @@ contexts:
   nushell-operators:
   - match: \b{{nushell_operators}}\b
     scope: support.function.operators.nu
+
+  boolean-operators:
+  - match: \b{{boolean_operators}}\b
+    scope: support.function.boolean.nu
 
 ###[ BUILTIN PACKAGES AND OBJECT FUNCTIONS ]####################################
 
