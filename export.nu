@@ -1,7 +1,5 @@
 #update nushell sublime syntax
-export def "nushell-syntax-2-sublime" [
- --push(-p) #push changes in submile syntax repo
-] {
+export def "nushell-syntax-2-sublime" [] {
   let builtin = (
       scope commands 
       | where is_builtin == true and is_keyword == false
@@ -85,9 +83,4 @@ export def "nushell-syntax-2-sublime" [
   $file | save -f ~/.config/sublime-text/Packages/User/nushell.sublime-syntax
 
   cp ~/.config/sublime-text/Packages/User/nushell.sublime-syntax ~/Dropbox/Development/linux/sublime/nushell_sublime_syntax/
-
-  if $push {
-    cd ~/Dropbox/Development/linux/sublime/nushell_sublime_syntax/
-    ai git-push -g
-  }
 }
