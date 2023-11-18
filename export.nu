@@ -13,7 +13,7 @@ export def "nushell-syntax-2-sublime" [] {
       | uniq
       | str join " | "
   )
-
+  
   let plugins = (
       scope commands 
       | where is_plugin == true

@@ -4,7 +4,7 @@
 
 ## Instalation
 1. In sublime text install the LSP package.
-2. In nushell (tested in Ubuntu 20.04):
+2. After cloning and cd-ing into the directory, in nushell run (tested in Ubuntu 20.04):
 ```bash
 ls | find -v README & export & color | get name | ansi strip | each {|file| cp -f $file (~/.config/sublime-text/Packages/User/nushell.sublime-syntax | path expand)}
 ```
