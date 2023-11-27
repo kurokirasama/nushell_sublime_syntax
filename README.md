@@ -6,7 +6,13 @@
 1. In sublime text install the LSP package.
 2. After cloning and cd-ing into the directory, in nushell run (tested in Ubuntu 20.04):
 ```nu
-ls | find -v README & export & color | get name | ansi strip | each {|file| cp -f $file (~/.config/sublime-text/Packages/User/nushell.sublime-syntax | path expand)}
+ls 
+| find -v README & export & color 
+| get name 
+| ansi strip 
+| each {|file| 
+	cp -f $file (~/.config/sublime-text/Packages/User/nushell.sublime-syntax | path expand)
+  }
 ```
 3. In sublime, open `Preferences > Customize Color Scheme` and add the contents of `sublime-color-scheme`. Modify to your liking.
 
