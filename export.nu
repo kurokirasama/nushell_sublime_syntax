@@ -13,7 +13,7 @@ export def "nushell-syntax-2-sublime" [] {
       | uniq
       | str join " | "
   )
-  
+
   let plugins = (
       scope commands 
       | where is_plugin == true
@@ -63,7 +63,7 @@ export def "nushell-syntax-2-sublime" [] {
       | str join " | "
   )   
 
-  let extra_builtin = " | else"
+  let extra_builtin = " | else | catch"
   let builtin = "    (?x: " + $builtin + $extra_builtin + ")"
   let plugins = "    (?x: " + $plugins + ")"
   let custom = "    (?x: " + $custom + ")"
@@ -74,7 +74,7 @@ export def "nushell-syntax-2-sublime" [] {
   let new_commands = [] ++ $builtin ++ $custom ++ $plugins ++ $keywords ++ $aliases ++ $operators
  
   mut file = open ~/.config/sublime-text/Packages/User/nushell.sublime-syntax | lines
-  let idx = $file | indexify | find '(?x:' | get index
+  let idx = $file | indexify | find '(?x:' | get index | drop
 
   for -n i in $idx {
     $file = ($file | upsert $i.item ($new_commands | get $i.index))
