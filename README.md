@@ -11,7 +11,7 @@ ls
 | get name 
 | ansi strip 
 | each {|file| 
-	cp -f $file (~/.config/sublime-text/Packages/User/nushell.sublime-syntax | path expand)
+	cp -f $file (~/.config/sublime-text/Packages/User | path expand)
   }
 ```
 3. In sublime, open `Preferences > Customize Color Scheme` and add the contents of `sublime-color-scheme`. Modify to your liking.
