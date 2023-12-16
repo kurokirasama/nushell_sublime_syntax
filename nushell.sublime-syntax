@@ -34,7 +34,7 @@ variables:
     (?x: alias | const | def | export | extern | for | hide | let | module | mut | overlay | register | return | scope | source | use)
 
   nushell_aliases: |-
-    (?x: apagar | bat | btop | cable-ubb | cal | copy | cputemp | dexit | dirs dexit | dirs enter | dirs g | dirs n | dirs p | dirs shells | dsitcl | enter | g | get-mac | get-wg | gmail | grp | math mean | math std | max-vol | mount-amara | mount-kira | mount-lmgg | mount-onedrive | mount-ubb | mpydf | mute | n | ncdu | netspeed | nu-clean | open-config | p | png | print-list | quantum | reiniciar | s | shells | ssh-amara | ssh-ies | takephoto | tree | um-gdrive | um-odrive | unmute | wsp)
+    (?x: your | aliases)
 
   nushell_operators: |-
     (?x: and | or | mod | in | not-in | not | xor | bit-or | bit-xor | bit-and | bit-shl | bit-shr | starts-with | ends-with)
