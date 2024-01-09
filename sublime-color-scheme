@@ -31,6 +31,10 @@
                          "foreground": "#D580FF",
                 },
                 {
+                         "scope": "support.function.personal.nu",
+                         "foreground": "#004CFF",
+                },
+                {
                          "scope": "support.function.operators.nu",
                          "foreground": "#FFFF00",
                 },
