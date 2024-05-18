@@ -1,10 +1,9 @@
 // Settings in here override those in "LSP/LSP.sublime-settings"
-   {
+   { 
        "clients": {
            "nushell": {
-               "command": ["/home/kira/.cargo/bin/nu", "--lsp"],
+               "command": ["/home/kira/.cargo/bin/nu", "--lsp","--no-config-file"],
                "enabled": true,
                "selector": "source.nu"
-           }
-       }
+           },
    }
