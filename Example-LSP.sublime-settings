@@ -1,0 +1,13 @@
+{
+    "clients": {
+        "nushell": {
+            "command": [
+                "/home/kira/.cargo/bin/nu",
+                "--lsp",
+                "--no-config-file"
+            ],
+            "enabled": true,
+            "selector": "source.nu"
+        }
+    }
+}
