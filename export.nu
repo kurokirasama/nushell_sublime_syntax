@@ -1,7 +1,5 @@
 #update nushell sublime syntax
-export def "nushell-syntax-2-sublime" [
- --push(-p) #push changes in submile syntax repo
-] {
+export def "nushell-syntax-2-sublime" [] {
   let builtin = filter-command built-in
   let plugins = filter-command plugin
   let custom = filter-command custom
